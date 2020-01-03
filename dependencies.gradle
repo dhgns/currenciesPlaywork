@@ -17,6 +17,7 @@ ext {
     gsonVersion = '2.8.1'
     picassoVersion = '2.71828'
     cImageViewVersion = '3.0.1'
+    crashLyticsVersion = '2.10.1'
 
     projectDependencies = [
 
@@ -33,6 +34,7 @@ ext {
             okHttp           : "com.squareup.okhttp3:okhttp:$okHttpVersion",
             okHttpLoggin     : "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
             gson             : "com.google.code.gson:gson:${gsonVersion}",
+            crashLytics     : "com.crashlytics.sdk.android:crashlytics:${crashLyticsVersion}"
     ]
 
     mobileDependencies = [

@@ -71,7 +71,7 @@ class HomeActivity : AppCompatActivity() {
         if (ll_currencies_container.indexOfChild(currencyView) != 0) {
 
             ll_currencies_container.getChildAt(0).findViewById<EditText?>(R.id.et_currency_value)
-                ?.isFocusable = false
+                ?.isEnabled = false
             ll_currencies_container.getChildAt(0).findViewById<EditText?>(R.id.et_currency_value)
                 ?.removeTextChangedListener(baseRateObserver)
 
@@ -79,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
             ll_currencies_container.addView(currencyView, 0)
 
             ll_currencies_container.getChildAt(0).findViewById<EditText?>(R.id.et_currency_value)
-                ?.isFocusable = true
+                ?.isEnabled = true
             ll_currencies_container.getChildAt(0).findViewById<EditText?>(R.id.et_currency_value)
                 ?.addTextChangedListener(baseRateObserver)
 
@@ -166,7 +166,7 @@ class HomeActivity : AppCompatActivity() {
 
         val currencyBaseView: EditText? = baseView?.findViewById(R.id.et_currency_value)
         currencyBaseView?.setText((1.0).toString())
-        currencyBaseView?.isFocusable = true
+        currencyBaseView?.isEnabled = true
 
         //We need to add the text watcher and so, we will detect the new values
         currencyBaseView?.addTextChangedListener(baseRateObserver)
@@ -196,11 +196,11 @@ class HomeActivity : AppCompatActivity() {
 
                 val baseCurrency = topCurrency
                 val currentCurrency = getCurrencyFromView(it)
-                val valueToConvert =
-                    if (topCurrencyValue.text.toString().isEmpty())
-                        0.0
-                    else
-                        topCurrencyValue.text.toString().toDouble()
+                val valueToConvert = try {
+                    topCurrencyValue.text.toString().toDouble()
+                } catch (e: NumberFormatException) {
+                    0.0
+                }
 
                 it.findViewById<EditText?>(R.id.et_currency_value)?.setText(
                     getRate(

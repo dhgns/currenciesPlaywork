@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1093697705394",
+    "firebase_url": "https://revolut-test-f4932.firebaseio.com",
+    "project_id": "revolut-test-f4932",
+    "storage_bucket": "revolut-test-f4932.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1093697705394:android:39a0262e93f95c87c440ab",
+        "android_client_info": {
+          "package_name": "com.dhernandez.revoulttest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1093697705394-uommltlbcej0ge25ktrfkrd8gpa5a25c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE4cm8vXXaGB8W-XYaCC9K_lvuddxGd-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1093697705394-uommltlbcej0ge25ktrfkrd8gpa5a25c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
