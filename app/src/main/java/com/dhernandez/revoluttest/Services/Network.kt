@@ -1,9 +1,7 @@
 package com.dhernandez.revoluttest.Services
 
 import com.dhernandez.revoluttest.BuildConfig
-import com.dhernandez.revoluttest.Modules.Rates
-import com.dhernandez.revoluttest.Modules.RevolutCurrenciesResponse
-import com.dhernandez.revoluttest.Utils.CountryCodeDeserializer
+import com.dhernandez.revoluttest.Modules.RevolutCurrenciesRate
 import com.google.gson.GsonBuilder
 import io.reactivex.Single
 import okhttp3.OkHttpClient
@@ -18,7 +16,6 @@ class Network : IRevolutAPI {
     init {
 
         val gson = GsonBuilder()
-            .registerTypeAdapter(Rates::class.java, CountryCodeDeserializer())
             .create()
 
         val retrofit = Retrofit.Builder()
@@ -32,7 +29,7 @@ class Network : IRevolutAPI {
 
     }
 
-    override fun fetchCurrencies(): Single<RevolutCurrenciesResponse> {
+    override fun fetchCurrencies(): Single<RevolutCurrenciesRate> {
 
         return revolutAPI.fetchCurrencies().map {
             it

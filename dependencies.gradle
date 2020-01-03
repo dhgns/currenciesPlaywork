@@ -16,13 +16,14 @@ ext {
     ankoVersion = "0.10.5"
     gsonVersion = '2.8.1'
     picassoVersion = '2.71828'
+    cImageViewVersion = '3.0.1'
 
     projectDependencies = [
 
             appCompat        : "com.android.support:support-compat:${appCompatVersion}",
             jUnit            : "junit:junit:4.12",
-            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
-            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            rxKotlin         : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid        : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
             kotlin           : "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
             kotlinAnnotations: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
             koin             : "org.koin:koin-android:${koinVersion}",
@@ -42,6 +43,7 @@ ext {
             kotlinViewModel : "android.arch.lifecycle:extensions:1.1.1",
             anko            : "org.jetbrains.anko:anko-commons:$ankoVersion",
             picasso         : "com.squareup.picasso:picasso:$picassoVersion",
+            circleImageView : "de.hdodenhof:circleimageview:$cImageViewVersion"
     ]
 
 
